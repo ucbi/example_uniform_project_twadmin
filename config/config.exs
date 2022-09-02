@@ -7,7 +7,6 @@
 # General application configuration
 import Config
 
-
 config :twadmin,
   ecto_repos: [Twadmin.Repo]
 

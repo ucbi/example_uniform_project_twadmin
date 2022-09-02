@@ -17,16 +17,8 @@ defmodule TwadminWeb.Router do
   scope "/", TwadminWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-  end
-
-
-  scope "/twadmin", TwadminWeb do
-    pipe_through :browser
-
     live "/", AdminLive, :admin
   end
-  
 
   if Mix.env() in [:dev, :test] do
     import Phoenix.LiveDashboard.Router
